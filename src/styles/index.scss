@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  border: none;
+  font-size: 20 px;
+  font-weight: 100;
+  font-family: poppins, sans-serif;
+}
+
+@import "../components/navbar";
+@import "../pages/home";
+@import "../pages/projects";
