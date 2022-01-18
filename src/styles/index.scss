@@ -1,3 +1,6 @@
+$background: #243448;
+$text-color: #e5effe;
+$navbar-height: 75px;
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +11,13 @@
   font-size: 20 px;
   font-weight: 100;
   font-family: poppins, sans-serif;
+  color:$text-color;
+}
+section {
+  background-color: #243448;
 }
 
 @import "../components/navbar";
 @import "../pages/home";
+@import "../pages/about";
 @import "../pages/projects";
