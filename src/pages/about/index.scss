@@ -1,4 +1,5 @@
 $portrait-size: 350px;
+
 .about__container {
   padding: 30vh 0;
   background-color: $background;
@@ -12,19 +13,19 @@ $portrait-size: 350px;
 
 .grid__container {
   display: grid;
-  grid-template-columns: 1fr 1.75fr;
-  grid-auto-rows: 500px;
+  grid-template-columns: auto 1fr;
+  column-gap: 5%;
+  align-items: center;
+  justify-content: center;
 }
 
 .left {
   margin-left: 5vw;
   overflow: hidden;
 }
-.right {
-  margin-top: 9vh;
-}
+
 .blurb {
-  margin-right: 4vw;
+  margin-right: 2em;
   color: $text-color;
   font-size: 1.5rem;
   font-weight: 700;
