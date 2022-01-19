@@ -5,7 +5,7 @@ const ProjectsData = () => {
   return data.Projects.map((project) => {
     return (
       <li
-        className={`${
+        className={`test ${
           project.id % 2 === 1 ? 'project__item__even' : 'project__item '
         }`}
       >
