@@ -76,12 +76,13 @@ $transition_time: 0.4s ease;
   opacity: 0;
   &__active {
     background-color: #e5effe;
-    padding: 10px 25px;
+    padding: 10px 0;
     margin-right: -35px;
     transition: $transition_time;
     opacity: 1;
     transform: translateY(0vh);
     & a {
+      padding: 0 25px;
       text-decoration: none;
       color: $link_active;
       transition: $transition_time;

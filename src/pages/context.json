@@ -13,19 +13,22 @@
       "id": 1,
       "name": "React Social Media Project",
       "description": "This is a project that I am mainly using to learn the ins-and-outs of front-end development. The long-term goal is to turn this project into a social media webapp for avid watchers of anime.",
-      "image": "https://media.comicbook.com/2020/08/top-anime-series-fans-watch-rest-of-their-lives-1232872-1280x0.jpeg"
+      "image": "https://media.comicbook.com/2020/08/top-anime-series-fans-watch-rest-of-their-lives-1232872-1280x0.jpeg",
+      "link": "https://github.com/"
     },
     {
       "id": 2,
       "name": "Covid-19 Chatbot",
       "description": "Led a team during Shellhacks (a hackathon hosted at FIU) that began development of a chatbot that advises if a user should or should not travel to a state or country based on prediction analysis data of the area with respect to the novel Coronavirus.",
-      "image": "https://www.cdc.gov/media/dpk/diseases-and-conditions/coronavirus/images/outbreak-coronavirus-world-1024x506px.jpg"
+      "image": "https://www.cdc.gov/media/dpk/diseases-and-conditions/coronavirus/images/outbreak-coronavirus-world-1024x506px.jpg",
+      "link": "https://github.com/"
     },
     {
       "id": 3,
       "name": "School Project: House of Horror",
       "description": "Developed a basic horror game in Java using JOptionPanes. This project used some intermediate/advanced level topics in Java such as polymorphism and creating abstract data structures.",
-      "image": "https://ei.marketwatch.com/Multimedia/2017/10/30/Photos/ZQ/MW-FX294_haunte_20171030155033_ZQ.jpg?uuid=97b57130-bdab-11e7-87b5-9c8e992d421e"
+      "image": "https://ei.marketwatch.com/Multimedia/2017/10/30/Photos/ZQ/MW-FX294_haunte_20171030155033_ZQ.jpg?uuid=97b57130-bdab-11e7-87b5-9c8e992d421e",
+      "link": "https://github.com/"
     }
   ],
   "Contact": {
