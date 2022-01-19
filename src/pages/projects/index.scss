@@ -1,41 +1,53 @@
+$image-size: 500px;
+
 .project__container {
+  padding-top: 10vh;
+  background-color: $background;
   display: grid;
-  grid-template-rows: repeat(1fr);
+  grid-template-rows: auto auto auto;
+  row-gap: 50px;
+  align-items: center;
+  justify-content: baseline;
 }
+.right{
+  margin-top: 10px;
+  margin-right: 50px;
+}
+.project__item {
+  display: grid;
+  grid-template-columns: $image-size auto;
+  column-gap: 20px;
+  overflow: hidden;
 
-.project {
-  &__item {
-    padding: 50px 0;
+  &__even {
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    column-gap: 15px;
-    background-color: #3986cc;
-    color: white;
-  }
-  &__item__even {
-    padding: 50px 0;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    column-gap: 15px;
-    background-color: #48a7ff;
-    color: white;
-  }
-
-  &__header {
-    font-size: 2rem;
-  }
-
-  &__description {
-    display: inline-block;
-    font-size: 1.2rem;
-    margin-right: 15vh;
-  }
-
-  &__image {
-    margin: 30px 50px;
-    height: 200px;
-    width: 400px;
-    object-fit: cover;
+    grid-template-columns: $image-size auto;
+    column-gap: 20px;
+    overflow: hidden;
+    background-color: #39506b;
   }
 }
-
+.project__header {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.project__image {
+  padding: 20px;
+  left: 30px;
+  width: $image-size;
+}
+.project__description
+{
+  padding-top: 3px;
+}
+.view__btn{
+  text-decoration: none;
+  padding: 10px;
+  border: 2px $text-color solid;
+  border-radius: 5px;
+  transition: $transition-time;
+  &:hover{
+    color: $link-active;
+    border-color: $link-active;
+  }
+}

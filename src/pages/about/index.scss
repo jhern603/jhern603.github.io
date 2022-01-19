@@ -1,0 +1,32 @@
+$portrait-size: 350px;
+
+.about__container {
+  padding: 30vh 0;
+  background-color: $background;
+}
+.portrait {
+  border-radius: 50%;
+  object-fit: cover;
+  width: $portrait-size;
+  height: $portrait-size;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  margin-left: 5vw;
+  overflow: hidden;
+}
+
+.blurb {
+  margin-right: 2em;
+  color: $text-color;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
