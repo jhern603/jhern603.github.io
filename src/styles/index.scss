@@ -1,5 +1,8 @@
 $background: #243448;
 $text-color: #e5effe;
+$link_active: #efc438;
+$drop_active: #df6970;
+
 $navbar-height: 75px;
 * {
   margin: 0;
@@ -15,6 +18,25 @@ $navbar-height: 75px;
 }
 section {
   background-color: #243448;
+}
+
+.back_to_top{
+  cursor: pointer;
+  transition: 0.4s;
+  &:hover{
+    color: $link-active;
+  }
+}
+
+.footer{
+  background-color: #243448;
+  
+  &{
+    padding: 15px 0;
+    color: #e5effe50;
+    font-size: 0.7rem;
+    text-align: center;
+  }
 }
 
 @import "../components/navbar";

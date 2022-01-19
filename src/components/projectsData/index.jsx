@@ -8,7 +8,7 @@ const ProjectsData = () => {
         <img src={project.image} alt="" className="project__image" />
         <div className="right">
           <header className="project__header">{project.name}</header>
-          <span className="project__description">{project.description}</span>
+          <p className="project__description">{project.description}</p>
           <br />
           <br />
           <br />

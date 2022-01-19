@@ -36,7 +36,10 @@ $image-size: 500px;
   left: 30px;
   width: $image-size;
 }
-
+.project__description
+{
+  padding-top: 3px;
+}
 .view__btn{
   text-decoration: none;
   padding: 10px;

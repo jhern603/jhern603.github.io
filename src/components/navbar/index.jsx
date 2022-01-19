@@ -1,15 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
 import data from '../../pages/context.json';
 
 const Navbar = () => {
   const [dropdown, setDropDown] = useState(false);
+  const dropdownRef = useRef(null);
 
   const dropdownHandler = (e) => {
     e.preventDefault();
     setDropDown(!dropdown);
-    console.log(dropdown);
   };
+  useEffect(() => {
+  const pageClickEvent = (e) => {
+      if (
+        dropdownRef.current !== null &&
+        !dropdownRef.current.contains(e.target)
+      ) {
+        setDropDown(!dropdown);
+      }
+  };
+
+  // If the item is active (ie open) then listen for clicks
+  if (dropdown) {
+    window.addEventListener('click', pageClickEvent);
+  }
+
+  return () => {
+    window.removeEventListener('click', pageClickEvent);
+  };
+
+    }, [dropdown]);
 
   return (
     <nav className="nav__container">
@@ -23,7 +43,11 @@ const Navbar = () => {
           <a href={`mailto:${data.Contact.email}`}>Contact</a>
         </li>
         <li className="nav__item__drop">
-          <a className={`dropdown${dropdown?"__active":""}`} onClick={dropdownHandler}>
+          <a
+            className={`dropdown${dropdown ? '__active' : ''}`}
+            ref={dropdownRef}
+            onMouseEnter={() => setDropDown(true)}
+          >
             Social Media
             <div
               className={`dropdown__decoration${dropdown ? '__active' : ''}`}

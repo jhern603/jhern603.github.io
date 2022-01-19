@@ -1,0 +1,18 @@
+.home__container{
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 45vh 0 20vh 0;
+  text-align: center;
+}
+
+.hero__header{
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.hero__blurb{
+  margin-top: -10px;
+  font-size: 1.5rem;
+}
