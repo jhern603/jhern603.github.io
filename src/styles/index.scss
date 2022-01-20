@@ -1,7 +1,7 @@
 $background: #243448;
 $text-color: #e5effe;
-$link_active: #efc438;
-$drop_active: #df6970;
+$link_active: #fc4854;
+$drop_active: #a52c34;
 
 $navbar-height: 75px;
 * {
@@ -43,3 +43,4 @@ section {
 @import "../pages/home";
 @import "../pages/about";
 @import "../pages/projects";
+@import "./mobileStyles.scss";

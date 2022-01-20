@@ -4,35 +4,34 @@ import data from '../../pages/context.json';
 
 const Navbar = () => {
   const [dropdown, setDropDown] = useState(false);
-  const dropdownRef = useRef(null);
   const [hamburger, setHamburger] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
-  const pageClickEvent = (e) => {
+    const pageClickEvent = (e) => {
       if (
         dropdownRef.current !== null &&
         !dropdownRef.current.contains(e.target)
       ) {
         setDropDown(!dropdown);
       }
-  };
-
-  if (dropdown) {
-    window.addEventListener('click', pageClickEvent);
-  }
-
-  return () => {
-    window.removeEventListener('click', pageClickEvent);
-  };
-
-    }, [dropdown]);
-
-    const menuHandler = (e) => {
-      e.preventDefault();
-      setHamburger(!hamburger);
-      console.log(hamburger);
     };
-  
+
+    if (dropdown) {
+      window.addEventListener('click', pageClickEvent);
+    }
+
+    return () => {
+      window.removeEventListener('click', pageClickEvent);
+    };
+  }, [dropdown]);
+
+  const menuHandler = (e) => {
+    e.preventDefault();
+    setHamburger(!hamburger);
+    console.log(hamburger);
+  };
+
   return (
     <nav className="nav__container">
       <div className="menu" onClick={menuHandler}>
@@ -54,6 +53,7 @@ const Navbar = () => {
             className={`dropdown${dropdown ? '__active' : ''}`}
             ref={dropdownRef}
             onMouseEnter={() => setDropDown(true)}
+            onClick={() => setDropDown(!dropdown)}
           >
             Social Media
             <div
