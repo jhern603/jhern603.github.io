@@ -16,3 +16,16 @@
   margin-top: -10px;
   font-size: 1.5rem;
 }
+
+@media (max-width: 500px) {
+  .home__container{
+    padding-bottom: 50vh;
+  }
+  .hero__header{
+    font-size: 2rem;
+  }
+
+  .hero__blurb{
+    font-size: 1rem;
+  }
+}
