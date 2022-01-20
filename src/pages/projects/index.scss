@@ -32,6 +32,8 @@ $image-size: 500px;
   padding: 20px;
   left: 30px;
   width: $image-size;
+  height: 300px;
+  object-fit: cover;
 }
 .project__header {
   font-weight: 700;
@@ -49,48 +51,5 @@ $image-size: 500px;
   &:hover {
     color: $link-active;
     border-color: $link-active;
-  }
-}
-
-@media (max-width: 900px) {
-  .project__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: center;
-    overflow: hidden;
-    padding-bottom: 40px;
-    &__even {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-self: center;
-      overflow: hidden;
-      background-color: #39506b;
-      padding-bottom: 40px;
-    }
-  }
-  .project__image {
-    padding: 20px;
-    left: 30px;
-    width: $image-size * 1.4;
-    object-fit: cover;
-  }
-  .project__header {
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-left: 6vw;
-  }
-  .project__description {
-    padding-top: 3px;
-    margin-left: 6vw;
-  }
-  .view__btn {
-    margin-left: 6vw;
-  }
-}
-@media (max-width: 500px) {
-  .project__image {
-    width: $image-size / 1.2;
   }
 }

@@ -14,6 +14,15 @@ const About = () => {
         </div>
         <div className="right">
           <p className="blurb">{data.blurb}</p>
+          <br />
+          <a
+            href={data.social.Resume}
+            className="view__btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
         </div>
       </div>
     </section>
