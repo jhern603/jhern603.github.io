@@ -10,8 +10,6 @@ const ProjectsData = () => {
           <header className="project__header">{project.name}</header>
           <p className="project__description">{project.description}</p>
           <br />
-          <br />
-          <br />
           <a
             href={project.link}
             className="view__btn"
