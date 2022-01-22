@@ -1,6 +1,9 @@
 import React from 'react';
 import data from '../context.json';
 import portrait from './images/portrait.png';
+
+
+
 const About = () => {
   return (
     <section className="about__container" id="about">

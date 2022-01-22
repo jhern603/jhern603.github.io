@@ -1,17 +1,26 @@
 $triangle_size: 3px;
 $triangle_thickness: 2px;
 $transition_time: 0.4s ease;
-.nav__container {
+
+.nav__container__scrolled {
+  transition: 0.4s ease;
+  filter: drop-shadow(0 4px 5px #00000060);
   background-color: #243448;
   width: 100%;
   height: $navbar-height;
   padding: 20px;
   position: fixed;
-  filter: drop-shadow(0 40px 50px #00000060);
+}
+.nav__container {
+  transition: 0.4s ease;
+  background-color: #243448;
+  width: 100%;
+  height: $navbar-height;
+  padding: 20px;
+  position: fixed;
 }
 
 .nav__header {
-  display: inline;
   & a {
     transition: $transition_time;
   }
@@ -22,12 +31,13 @@ $transition_time: 0.4s ease;
     transition: $transition_time;
   }
 }
+.nav__links {
+  display: grid;
+  grid-template-columns: auto 4rem 4.5rem 9.2rem 5.3rem;
+  column-gap: 0;
+}
 .nav__item {
-  display: inline;
-  float: right;
-  margin: 0px 10px;
   font-size: 1rem;
-
   a {
     &:hover {
       cursor: pointer;
@@ -39,12 +49,11 @@ $transition_time: 0.4s ease;
   }
 
   &__drop {
-    display: inline;
-    float: right;
     margin: 0px 10px;
     font-size: 1rem;
   }
 }
+
 .dropdown {
   &__active {
     &:hover {
