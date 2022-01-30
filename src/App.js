@@ -17,9 +17,9 @@ function App() {
       <About ref={about} />
       <Projects ref={projects} />
       <p className="footer">
-        &copy; Jose Hernandez 2020 -{' '}
+        &copy; Jose "UWU" Hernandez 2020 -{' '}
         <Link to="home" smooth={true} duration={500} className = "back_to_top">
-          Back to top
+          Back to UWU
         </Link>
       </p>
     </div>

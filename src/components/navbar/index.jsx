@@ -66,14 +66,14 @@ const Navbar = () => {
         {/* about */}
         <li className={`nav__item${hamburger ? '__burger' : ''}`}>
           <Link to="about" smooth={true} duration={500}>
-            About
+            UWU
           </Link>
         </li>
 
         {/* projects */}
         <li className={`nav__item${hamburger ? '__burger' : ''}`}>
           <Link to="projects" smooth={true} duration={500}>
-            Projects
+            UWU
           </Link>
         </li>
 
@@ -85,7 +85,7 @@ const Navbar = () => {
             onMouseEnter={() => setDropDown(true)}
             onClick={() => setDropDown(!dropdown)}
           >
-            Social Media
+            UWU
             <div
               className={`dropdown__decoration${dropdown ? '__active' : ''}`}
             />
@@ -94,28 +94,28 @@ const Navbar = () => {
           <SocialDrop
             state={dropdown}
             href={data.social.Instagram}
-            blurb="Instagram"
+            blurb="UWU"
           />
           <SocialDrop
             state={dropdown}
             href={data.social.LinkedIn}
-            blurb="Linkedin"
+            blurb="UWU"
           />
           <SocialDrop
             state={dropdown}
             href={data.social.Github}
-            blurb="Github"
+            blurb="UWU"
           />
           <SocialDrop
             state={dropdown}
             href={data.social.Photography}
-            blurb="Photography"
+            blurb="UWU"
           />
         </li>
 
         {/* contact */}
         <li className={`nav__item${hamburger ? '__burger' : ''}`}>
-          <a href={`mailto:${data.Contact.email}`}>Contact</a>
+          <a href={`mailto:${data.Contact.email}`}>UWU</a>
         </li>
       </ul>
     </nav>
