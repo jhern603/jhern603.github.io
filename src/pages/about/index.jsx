@@ -1,6 +1,6 @@
 import React from 'react';
 import data from '../context.json';
-import portrait from './images/portrait.png';
+import portrait from './images/portrait.jpg';
 
 
 
