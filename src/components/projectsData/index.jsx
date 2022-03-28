@@ -16,7 +16,7 @@ const ProjectsData = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View on GitHub
+            UWU
           </a>
         </div>
       </li>

@@ -1,4 +1,4 @@
-$background: #243448;
+$background: #ff9ef9;
 $text-color: #e5effe;
 $link_active: #fc4854;
 $drop_active: #a52c34;
@@ -17,7 +17,7 @@ $navbar-height: 75px;
   color:$text-color;
 }
 section {
-  background-color: #243448;
+  background-color: $background;
 }
 
 .back_to_top{
@@ -29,7 +29,7 @@ section {
 }
 
 .footer{
-  background-color: #243448;
+  background-color: $background;
   
   &{
     padding: 15px 0;

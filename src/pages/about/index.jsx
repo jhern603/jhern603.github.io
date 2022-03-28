@@ -24,7 +24,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Resume
+            UWU
           </a>
         </div>
       </div>
