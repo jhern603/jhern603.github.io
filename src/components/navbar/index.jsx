@@ -6,6 +6,7 @@ const Navbar = () => {
   const [dropdown, setDropDown] = useState(false);
   const [hamburger, setHamburger] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const isMobile = window.matchMedia("only screen and (max-width: 900px)").matches;
 
   const dropdownRef = useRef(null);
 
@@ -49,20 +50,19 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`nav__container${scrollPosition >= 50 ? '__scrolled' : ''}`}
+      className={`nav__container${scrollPosition >= 50 && !isMobile ? '__scrolled' : ''}`}
     >
       <div className="menu" onClick={menuHandler}>
         <span className="bar" />
         <span className="bar" />
         <span className="bar" />
       </div>
+      <h1 className={`nav__header${hamburger ? '__burger' : ''}`}>
+        <Link to="home" smooth={true} duration={500}>
+          {data.name}
+        </Link>
+      </h1>
       <ul className={`nav__links`}>
-        <h1 className={`nav__header${hamburger ? '__burger' : ''}`}>
-          <Link to="home" smooth={true} duration={500}>
-            {data.name}
-          </Link>
-        </h1>
-
         {/* about */}
         <li className={`nav__item${hamburger ? '__burger' : ''}`}>
           <Link to="about" smooth={true} duration={500}>
