@@ -12,6 +12,7 @@ $transition_time: 0.4s ease;
   height: $navbar-height;
   padding: 20px;
   position: fixed;
+  z-index: 1;
 }
 .nav__container {
   display: flex;
@@ -22,6 +23,7 @@ $transition_time: 0.4s ease;
   height: $navbar-height;
   padding: 20px;
   position: fixed;
+    z-index: 1;
 }
 
 .nav__header {
@@ -39,7 +41,7 @@ $transition_time: 0.4s ease;
 .nav__links {
   display: grid;
   text-align: center;
-  grid-template-columns: 3vw 4vw 8vw 4vw;
+  grid-template-columns: 3vw 4vw 10vw 4vw;
   grid-template-rows: 30px;
   column-gap:15px;
 }
@@ -98,7 +100,6 @@ $transition_time: 0.4s ease;
   &__active {
     background-color: #e5effe;
     padding: 10px 0;
-    margin-right: -35px;
     transition: $transition_time;
     opacity: 1;
     transform: translateY(0vh);
