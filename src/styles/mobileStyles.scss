@@ -2,13 +2,12 @@
   //navbar
   .nav__container {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     padding: 0;
   }
   .menu {
     display: flex;
-    left: 46vw;
-    margin-top: 10px;
+    left: 46%;
   }
   .nav__item,
   .nav__header,
@@ -16,22 +15,21 @@
     display: none;
   }
 
-  .nav__header__burger
-  {
-    margin-top: 8vh;
+  .nav__header__burger {
+    padding-top: 10vh;
     background-color: $background;
-  padding-bottom: 3vh;
-  text-align: center;
+    padding-bottom: 3vh;
+    text-align: center;
   }
-.nav__item__burger, .nav__item__drop__burger{
-  padding-bottom: 1rem;
-  background-color: $background;
-  width:100%;
-
-  & a{
-    text-decoration: none;
+  .nav__item__burger,
+  .nav__item__drop__burger {
+    padding-bottom: 1rem;
+    background-color: $background;
+    width: 100%;
+    & a {
+      text-decoration: none;
+    }
   }
-}
 
   .dropdown__decoration__active {
     border: solid #e5effe;
@@ -43,8 +41,6 @@
     display: none;
     opacity: 0;
     &__active {
-      // margin-left: -40px;
-      width: 100vw;
       background-color: $background;
       transition: $transition_time;
       text-align: center;
@@ -135,7 +131,8 @@
     font-size: 2rem;
   }
 
-  .Typewriter__wrapper, .Typewriter__cursor {
+  .Typewriter__wrapper,
+  .Typewriter__cursor {
     margin-top: 0;
     font-size: 0.7rem;
   }
