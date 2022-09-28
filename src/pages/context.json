@@ -6,7 +6,7 @@
     "Instagram": "https://www.instagram.com/jhernandez554/",
     "LinkedIn": "https://www.linkedin.com/in/jhern603/",
     "Github": "https://github.com/jhern603",
-    "Resume": "assets/Jose_Hernandez_Resume.pdf",
+    "Resume": "./assets/Jose_Hernandez_Resume.pdf",
     "Photography": "https://photos.josehernandez.dev/"
   },
   "Projects": [
