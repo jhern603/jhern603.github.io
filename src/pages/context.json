@@ -1,7 +1,7 @@
 {
   "name": "JOSE HERNANDEZ",
-  "hero":"SOFTWARE ENGINEER | STUDENT | PHOTOGRAPHER | SOLDIER",
-  "blurb": "I am a full-time student at Florida International University, a former member of UPE @ FIU's executive board, and currently serving in the US Army Reserves. I have a demonstrated history of high-caliber leadership as well as the ability to work well in a team.",
+  "hero": "SOFTWARE ENGINEER | STUDENT | PHOTOGRAPHER | VETERAN",
+  "blurb": "I am a full-time student at Florida International University, a member of INIT @ FIU's executive board, and a veteran of the US Army Reserves. I have a demonstrated history of high-caliber leadership as well as the ability to work well in a team.",
   "social": {
     "Instagram": "https://www.instagram.com/jhernandez554/",
     "LinkedIn": "https://www.linkedin.com/in/jhern603/",
@@ -19,20 +19,13 @@
     },
     {
       "id": 2,
-      "name": "React Social Media Project",
-      "description": "This was a project that I used to learn web development. The long-term goal was to turn this project into a social media webapp for avid watchers of anime.",
-      "image": "https://media.comicbook.com/2020/08/top-anime-series-fans-watch-rest-of-their-lives-1232872-1280x0.jpeg",
-      "link": "https://github.com/jhern603/AniDachi"
+      "name": "Discord Moderation Bot",
+      "description": "Worked on a utility bot for a Discord server that will automate the process of different tasks such as adding user roles, creating event announcement, and more.",
+      "image": "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/908828/how-to-make-a-discord-bot-7c0fe302b98b05b145682344b3a4ec59.png",
+      "link": "https://github.com/jhern603/covidTravelAssistant"
     },
     {
       "id": 3,
-      "name": "Discord Moderation Bot",
-      "description": "I am actively working on a utility bot for a Discord server that will automate the process of different tasks such as adding user roles, creating event announcement, and more.",
-      "image": "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/908828/how-to-make-a-discord-bot-7c0fe302b98b05b145682344b3a4ec59.png",
-      "link": "https://github.com/jhern603/TotallyLegitDiscordBot"
-    },
-    {
-      "id": 4,
       "name": "School Project: House of Horror",
       "description": "Developed a basic horror game in Java using JOptionPanes. This project used some intermediate/advanced level topics in Java such as polymorphism and creating abstract data structures.",
       "image": "https://ei.marketwatch.com/Multimedia/2017/10/30/Photos/ZQ/MW-FX294_haunte_20171030155033_ZQ.jpg?uuid=97b57130-bdab-11e7-87b5-9c8e992d421e",
