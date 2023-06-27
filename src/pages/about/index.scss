@@ -11,6 +11,16 @@ $portrait-size: 350px;
   height: $portrait-size;
 }
 
+.badge{
+  object-fit:fill;
+  max-width: $portrait-size/3;
+}
+.badge__container{
+    position:relative;
+    top: -7vw;
+    left: 25.5vh;
+    overflow: hidden;
+  }
 .grid__container {
   display: grid;
   grid-template-columns: auto 1fr;
