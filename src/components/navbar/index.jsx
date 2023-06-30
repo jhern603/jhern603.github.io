@@ -50,7 +50,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`nav__container${scrollPosition >= 50 && !isMobile ? '__scrolled' : ''}`}
+      className={`nav__container${
+        scrollPosition >= 50 && !isMobile ? '__scrolled' : ''
+      }`}
     >
       <div className="menu" onClick={menuHandler}>
         <span className="bar" />
@@ -110,6 +112,11 @@ const Navbar = () => {
             state={dropdown}
             href={data.social.Photography}
             blurb="Photography"
+          />
+          <SocialDrop
+            state={dropdown}
+            href={data.social.Blog}
+            blurb="Blog"
           />
         </li>
 
