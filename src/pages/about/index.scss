@@ -10,17 +10,28 @@ $portrait-size: 350px;
   width: $portrait-size;
   height: $portrait-size;
 }
-
-.badge{
-  object-fit:fill;
-  max-width: $portrait-size/3;
+.badge__container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: $portrait-size/3;
 }
-.badge__container{
-    position:relative;
-    top: -7vw;
-    left: 25.5vh;
-    overflow: hidden;
-  }
+.badge {
+  position: absolute;
+  object-fit: fill;
+  height: $portrait-size/3;
+  margin-top: -7%;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .badge {
+  position: absolute;
+  object-fit: fill;
+  height: $portrait-size/3;
+  margin-top: -3.8%;
+  overflow: hidden;
+}
+}
 .grid__container {
   display: grid;
   grid-template-columns: auto 1fr;
