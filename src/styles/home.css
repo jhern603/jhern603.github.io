@@ -1,0 +1,20 @@
+.league{
+  position:relative;
+  padding-top:30vh;
+  padding-bottom: 40vh;
+}
+.hero{
+  text-align: center;
+}
+.sidekick{
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero{
+    font-size: 1.78em;
+  }
+  .sidekick{
+    font-size: 1.3em;
+  }
+}

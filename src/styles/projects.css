@@ -1,0 +1,98 @@
+.experience {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  border-radius: 27px;
+  background-color: rgba(0, 0, 0, 0.17);
+  width: 90%;
+  margin-left: var(--left-padding-text);
+  padding: 30px;
+  opacity: 60%;
+  transition: 150ms ease;
+}
+
+.experience:not(:first-child) {
+  margin-top: 50px;
+}
+
+.experience:hover {
+  opacity: 100%;
+}
+
+.experience_text {
+  line-height: 1.2em;
+}
+
+.skills_container {
+  list-style-type: none;
+}
+
+.skill:is(:first-child) {
+  display: inline-block;
+  margin-left: 0;
+  border-radius: 27px;
+}
+
+.skill {
+  line-height: 0;
+  color: white;
+  display: inline-block;
+  padding: 1.4rem;
+  margin-top: 20px;
+  margin-left: 15px;
+  background-color: rgba(35, 315, 171, 65%);
+  border-radius: 27px;
+}
+
+.experience_header {
+  padding-bottom: 0.8em;
+  font-size: 2rem;
+}
+
+.experience_text {
+  padding-bottom: 0.8em;
+}
+
+.experience_dates {
+  font-size: 1.7rem;
+  opacity: 0.65;
+}
+
+@media only screen and (max-width : 900px) {
+  .experience_container {
+    width: 100%;
+    margin: auto;
+    text-align: center
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    margin-left: -30px;
+    border-radius: 27px;
+    width: 100%;
+    padding: 30px;
+    opacity: 100%;
+  }
+
+  .experience_header {
+    padding-bottom: 0.8em;
+    font-size: 1.8rem;
+  }
+
+  .experience_dates {
+    font-size: 1.5rem;
+    padding-bottom: 1em;
+    opacity: 0.65;
+  }
+
+  .skill:is(:first-child) {
+    display: flex;
+  }
+
+  .skill {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}

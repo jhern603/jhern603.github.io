@@ -1,0 +1,61 @@
+{
+  "name": "Jose Hernandez",
+  "hero": "Software Engineer. Photographer. Veteran.",
+  "blurb": "I am a graduate from Florida International University, a former member of INIT @ FIU's executive board, and a veteran of the US Army Reserves. I have a demonstrated history of high-caliber leadership as well as the ability to work well in a team.",
+  "social": {
+    "Instagram": "https://www.instagram.com/jhernandez554/",
+    "LinkedIn": "https://www.linkedin.com/in/jhern603/",
+    "Github": "https://github.com/jhern603",
+    "Resume": "https://drive.google.com/file/d/1roSXHq-z6gfWZ7z5jLPX9IdiVr0Wbw96/view?usp=sharing",
+    "Photography": "https://photos.josehernandez.dev/",
+    "Blog": "https://blog.josehernandez.dev/"
+  },
+  "Projects": [
+    {
+      "id": 1,
+      "name": "Automated Integration Testing",
+      "description": "Created an automated integration testing suite to improve the reliability of Kubernetes provider services for Oracle Cloud Infrastructure. This project aimed at improving the quality of production code pushed to production, as well as decrease debugging time, allowing members to focus on other tasks.",
+      "image": "https://www.testim.io/wp-content/uploads/2021/11/Unit-Test-vs.-Integration-Test-Tell-Them-Apart-and-Use-Both@2x.png",
+      "link": "https://www.oracle.com/cloud/cloud-native/container-engine-kubernetes/"
+    },
+    {
+      "id": 2,
+      "name": "Enhancements to FIU KFSCIS Website",
+      "description": "Improved SEO ratings, accessibility score, and performance of the KFSCIS website through WordPress updates, as well as updating content for screen-reader accessibility. Additionally, implemnted an AI-Powered chatbot to aide the school's technical support team through frequently asked questions that the chatbot would answer.",
+      "image": "https://www.cis.fiu.edu/wp-content/uploads/2016/07/ECS-Building-1280x853.jpg",
+      "link": "https://cs.fiu.edu/"
+    },
+    {
+      "id": 3,
+      "name": "Video Analytics Visualizer",
+      "description": "Created a video analytics visualizer for Oracle Digital Media Services, allowing customers to measure engagement and impact viewers will have when viewing the customer's multimedia content.",
+      "image": "https://static.wingify.com/gcp/uploads/sites/3/2020/02/Video-Heatmap.jpg",
+      "link": "https://github.com/jhern603/VideoVisualizerDocumentation"
+    }
+  ],
+  "Photography": [
+    {
+      "album_name": "FIU Campus at Night",
+      "link": "https://photos.josehernandez.dev/night-campus-photography",
+      "cover":"https://cdn.myportfolio.com/26ec1f40-ebd7-4527-ba00-e1063aa0c589/5936288b-973d-4db9-8fcd-fb6adabc1642_rw_1920.jpg?h=728420d230323c0bd8a540aec916f3e9"
+    },
+    {
+      "album_name": "FIU Freshman Convocation 2021",
+      "link": "https: //photos.josehernandez.dev/21convocation",
+      "cover":"https://cdn.myportfolio.com/26ec1f40-ebd7-4527-ba00-e1063aa0c589/54365724-6688-49cd-b8d1-73cbef29928b_rw_1920.jpg?h=436fb50d6acc9b736096836b376a63d3"
+    },
+    {
+      "album_name": "FIU Walk on Water 2022",
+      "link": "https://photos.josehernandez.dev/fiu-walk-on-water-2022",
+      "cover": "https://cdn.myportfolio.com/26ec1f40-ebd7-4527-ba00-e1063aa0c589/53235ce2-4437-446f-8905-255277d79423_rw_1920.jpg?h=d11b7ba74b7323102a2362a083692aec"
+    },
+    {
+      "album_name": "FIU Spikball Fall 2023",
+      "link": "https://photos.josehernandez.dev/spikeball-sept-2023",
+      "cover": "https://cdn.myportfolio.com/26ec1f40-ebd7-4527-ba00-e1063aa0c589/59bf2217-22c7-403a-97ba-c03c2c316026_rw_1920.jpg?h=a28b5e7398a710b71ac516030beb2ea5"
+    }
+  ],
+  "Contact": {
+    "email": "contact@josehernandez.dev"
+  }
+}

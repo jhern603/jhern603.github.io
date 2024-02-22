@@ -1,27 +1,19 @@
-import React from 'react';
-import Navbar from './components/navbar';
-import Home from './pages/home';
-import About from './pages/about';
-import Projects from './pages/projects';
-import { Link } from 'react-scroll';
-
+import Home from "./pages/home";
+import About from "./pages/about";
+import Projects from "./pages/projects";
+import Photos from "./pages/photography"
+import Navbar from "./components/navbar"
+import './styles/reset.css'
+import './styles/global.css'
 function App() {
-  const home = React.useRef();
-  const about = React.useRef();
-  const projects = React.useRef();
-
   return (
-    <div className="App">
+    <div>
       <Navbar />
-      <Home ref={home} />
-      <About ref={about} />
-      <Projects ref={projects} />
-      <p className="footer">
-        &copy; Jose Hernandez 2020 -{' '}
-        <Link to="home" smooth={true} duration={500} className = "back_to_top">
-          Back to top
-        </Link>
-      </p>
+      <main>
+        <About />
+        <Projects />
+        <Photos />
+      </main>
     </div>
   );
 }
