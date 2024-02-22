@@ -11,6 +11,7 @@ export default function About() {
           <h1>{about.name}</h1>
           <h3>{about.headline}</h3>
           <p>{about.blurb}</p>
+          <a  href="https://drive.google.com/file/d/1roSXHq-z6gfWZ7z5jLPX9IdiVr0Wbw96/view?usp=sharing">View Resume</a>
         </div>
         <div className="grid_right">
           <p dangerouslySetInnerHTML={{ __html: about.bio }} />
