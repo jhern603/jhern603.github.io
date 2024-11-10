@@ -5,7 +5,21 @@
   "bio": " Everyone knows about MySpace and its endless customization options through CSS. As a 9 year-old, I didn't know anything about CSS so I copy pasted some template from the internet. I then played with the CSS to get exactly what I wanted. After that, came <b>YouTube</b> and its customization. My explorations went everywhere throughout the years. But one things is for certain, since 2010, I would always go back to coding, even if it was for a single day. <br /><br /> I have ventured in web development, game development, <b>mobile development</b>, but the niche that I am best suited for is backend development. <br /><br /> I am a software engineer in the cloud by trade, but also like to do <b>photography</b> in my spare time, or torture myself by playing <b>soulsborne</b> games for hours on end.",
   "experience": [
     {
-      "dates": "Feb. 2024 - Present",
+      "dates": "July 2024 - Present",
+      "job_title": "Software Engineer Intern",
+      "company": "Oracle",
+      "description": "Improved DevOps experience for certain teams through the utilization of Oracle APEX and integration of various OCI Services.",
+      "link": "https://www.oracle.com/",
+      "tags": [
+        "Oracle DB 19",
+        "Oracle APEX",
+        "Jenkins",
+        "Python",
+        "Docker"
+      ]
+    },
+    {
+      "dates": "Feb. 2024 - July 2024",
       "job_title": "Junior Webmaster",
       "company": "FIU KFSCIS",
       "description": "Improved SEO ratings, accessibility score, and performance of the KFSCIS website through WordPress updates, as well as updating content for screen-reader accessibility. Additionally, implemnted an AI-Powered chatbot to aide the school's technical support team through frequently asked questions that the chatbot would answer.",
@@ -39,19 +53,6 @@
       "tags": [
         "Grafana",
         "Python",
-        "Java",
-        "Docker"
-      ]
-    },
-    {
-      "dates": "May 2021 - Aug 2021",
-      "job_title": "Software Engineer Intern",
-      "company": "Oracle",
-      "description": "Created a video analytics visualizer for Oracle Digital Media Services, allowing customers to measure engagement and impact viewers will have when viewing the customer's multimedia content.",
-      "link": "https://github.com/jhern603/VideoVisualizerDocumentation",
-      "tags": [
-        "Grafana",
-        "PostgreSQL",
         "Java",
         "Docker"
       ]
