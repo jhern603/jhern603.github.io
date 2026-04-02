@@ -6,9 +6,9 @@ export const hero = {
   tagline:
     'AI enablement, security practitioner, and software engineer by day — gamer, photographer and regular human also by day... and night',
   stats: [
-    { value: '2+', label: 'Years at Oracle' },
-    { value: '2', label: 'OCI Certifications' },
-    { value: '6', label: 'Years in the Army' },
+    { value: '3', label: 'Different Careers' },
+    { value: '2+', label: 'Mindsets' },
+    { value: '1', label: 'Person' },
   ],
   codeSnippet: `class SoftwareEngineer:
     def __init__(self):
@@ -248,7 +248,6 @@ export const ticker = [
   'Java',
   'Compliance Enforcement',
   'DLP',
-  'QLoRA Fine-Tuning',
   'Threat Intelligence',
   'Self-Hosted Infrastructure',
   'SSO/OIDC',
