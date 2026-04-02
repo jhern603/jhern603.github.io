@@ -1,5 +1,4 @@
 # Jose Hernandez — Portfolio
-
 Personal portfolio site built with React + Vite + Tailwind CSS + Framer Motion.
 
 **Live:** [josehernandez.dev](https://josehernandez.dev)
