@@ -40,6 +40,16 @@ export default function Navbar() {
               </button>
             </li>
           ))}
+          <li>
+            <a
+              href="https://blog.josehernandez.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-medium tracking-widest uppercase text-muted-light hover:text-accent transition-colors"
+            >
+              Blog
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
