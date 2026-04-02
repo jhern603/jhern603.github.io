@@ -1,70 +1,173 @@
-# Getting Started with Create React App
+# Jose Hernandez — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio site built with React + Vite + Tailwind CSS + Framer Motion.
 
-## Available Scripts
+**Live:** [josehernandez.dev](https://josehernandez.dev)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Tool | Purpose |
+|---|---|
+| [React 18](https://react.dev) | UI |
+| [Vite 5](https://vitejs.dev) | Build / dev server |
+| [Tailwind CSS 3](https://tailwindcss.com) | Styling |
+| [Framer Motion](https://www.framer.com/motion/) | Scroll animations |
+| [Lucide React](https://lucide.dev) | Icons |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+npm run dev       # http://localhost:3000
+npm run build     # production build → dist/
+npm run preview   # preview production build locally
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+portfolio/
+├── public/
+│   ├── avatar.jpg        ← drop your headshot here
+│   └── favicon.svg
+├── src/
+│   ├── data/
+│   │   └── content.js    ← all site content lives here
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Ticker.jsx
+│   │   ├── About.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Stack.jsx
+│   │   └── Contact.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── tailwind.config.js
+└── vite.config.js
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Customizing Content
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**All text, data, and links are in one place:** `src/data/content.js`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Sections
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Export | Controls |
+|---|---|
+| `hero` | Name, tagline, code snippet, stat counters |
+| `about` | Bio paragraphs, highlighted phrases, location |
+| `experience` | Job entries — company, role, period, bullets |
+| `projects` | Project cards — title, description, tags, featured flag |
+| `stack` | Tech categories and items |
+| `education` | School, degree, period |
+| `contact` | Email, GitHub URL, LinkedIn URL |
+| `ticker` | Scrolling marquee items |
+| `nav` | Navigation link labels (must match section IDs) |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Adding a project
 
-## Learn More
+```js
+// src/data/content.js → projects array
+{
+  title: 'My Project',
+  description: 'What it does and why it matters.',
+  tags: ['Python', 'OCI', 'MCP'],
+  featured: true,   // true = large card in top row, false = smaller card below
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Adding an experience entry
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```js
+// src/data/content.js → experience array (newest first)
+{
+  company: 'Company Name',
+  role: 'Your Title',
+  period: 'Jan 2025 – Present',
+  location: 'City, ST',
+  bullets: [
+    'Achievement one.',
+    'Achievement two.',
+  ],
+},
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Design Tokens
 
-### Analyzing the Bundle Size
+Defined in `tailwind.config.js`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Token | Value | Usage |
+|---|---|---|
+| `bg-light` | `#243448` | Page background |
+| `bg-dark` | `#1A2838` | Deeper background variant |
+| `surface-light` | `#1C2D3E` | Cards, panels |
+| `primary-light` | `#E8EDF2` | Body text, headings |
+| `accent` | `#5BB8D4` | Links, highlights, icons |
+| `muted-light` | `#7A95AB` | Secondary text, labels |
+| `border` | `#3A5170` | Card borders, dividers |
 
-### Making a Progressive Web App
+### Gradient text
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Applied via the `.gradient-text` CSS class (`src/index.css`). Animates over 30s between:
 
-### Advanced Configuration
+```
+#5BB8D4 → #2A7BA0 → #1A6FA5 → #2A7BA0 → #5BB8D4
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Used on: `HERNANDEZ`, section heading callouts (`intersection`, `worked`, `work`, `Arsenal`, `TALK`), and inline bio highlights.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Adding Your Photo
 
-### `npm run build` fails to minify
+Drop a headshot at `public/avatar.jpg`. The About section displays it automatically. If the file is missing, it falls back to "JH" initials.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Recommended: square crop, at least 800×800px, face near top of frame (the image uses `object-top`).
+
+---
+
+## Deployment
+
+### Vercel (recommended)
+
+```bash
+npm i -g vercel
+vercel
+```
+
+Point your custom domain (`josehernandez.dev`) in the Vercel dashboard under **Domains**.
+
+### Netlify
+
+```bash
+npm run build
+# drag-and-drop the dist/ folder at app.netlify.com/drop
+```
+
+Or connect the GitHub repo for automatic deploys on push.
+
+---
+
+## Key Files Reference
+
+| File | What to touch |
+|---|---|
+| `src/data/content.js` | All copy, links, and data |
+| `src/index.css` | Gradient, ticker, scrollbar styles |
+| `tailwind.config.js` | Color tokens, font, animation config |
+| `public/avatar.jpg` | Your headshot |
+| `public/favicon.svg` | Browser tab icon |
+| `index.html` | Page title and meta description |
