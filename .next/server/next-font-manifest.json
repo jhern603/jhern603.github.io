@@ -1,0 +1,19 @@
+{
+  "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/21ca8f3f56c22ca2-s.p.1cp9-4nby68jc.woff2",
+      "static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/21ca8f3f56c22ca2-s.p.1cp9-4nby68jc.woff2",
+      "static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2"
+    ],
+    "[project]/app/work/[slug]/page": [
+      "static/media/21ca8f3f56c22ca2-s.p.1cp9-4nby68jc.woff2",
+      "static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

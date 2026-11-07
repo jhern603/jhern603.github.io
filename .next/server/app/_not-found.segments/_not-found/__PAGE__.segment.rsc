@@ -1,0 +1,31 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/2z73n6z_wcu7q.js"
+3:"TerminalProvider"
+4:I[29272,["$2"],"$3"]
+5:I[39756,["$2"],"default"]
+6:I[37457,["$2"],"default"]
+7:"/_next/static/chunks/2n5qeheznvl4u.js"
+8:I[22016,["$2","$7"],""]
+f:I[97367,["$2"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$2"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$2"],"$15"]
+17:I[27201,["$2"],"IconMark"]
+:HL["/_next/static/chunks/3tc8ruo_3l2fo.css","style"]
+a:X
+d:X
+d:C
+e:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[[["$","header",null,{"className":"topbar is-detail","children":[["$","$L8",null,{"className":"brand","href":"/","children":"JOSE HERNANDEZ"}],["$","$L8",null,{"className":"link back","href":"/#work","children":"← ALL WORK"}],["$","span",null,{"children":"404"}]]}],["$","main",null,{"children":["$","section",null,{"className":"d-hero","children":[["$","div",null,{"className":"stripe","aria-hidden":"true"}],["$","h1",null,{"className":"cond","children":"Not found"}],["$","p",null,{"children":"No such file or directory. Head back and type 'projects' in the terminal."}]]}]}],["$","footer",null,{"className":"bottombar","children":[["$","span",null,{"className":"help"}],["$","span",null,{"children":["© ",2026," ","JOSEHERNANDEZ.DEV"]}]]}]],[["$","script","script-0",{"src":"/_next/static/chunks/2n5qeheznvl4u.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$a"}}]]
+b:[["children",{"s":"/_not-found","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@c","v":"$d","s":"$a"},"c":"$Qe"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/3tc8ruo_3l2fo.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/2z73n6z_wcu7q.js","async":true}]],["$","html",null,{"lang":"en","className":"iX1fDW_variable SiBDha_variable","data-scroll-behavior":"smooth","children":["$","body",null,{"children":["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}],"notFound":[[["$","header",null,{"className":"topbar is-detail","children":[["$","$L8",null,{"className":"brand","href":"/","children":"JOSE HERNANDEZ"}],["$","$L8",null,{"className":"link back","href":"/#work","children":"← ALL WORK"}],["$","span",null,{"children":"404"}]]}],["$","main",null,{"children":["$","section",null,{"className":"d-hero","children":[["$","div",null,{"className":"stripe","aria-hidden":"true"}],["$","h1",null,{"className":"cond","children":"Not found"}],["$","p",null,{"children":"No such file or directory. Head back and type 'projects' in the terminal."}]]}]}],["$","footer",null,{"className":"bottombar","children":[["$","span",null,{"className":"help"}],["$","span",null,{"children":["© ",2026," ","JOSEHERNANDEZ.DEV"]}]]}]],[]]}]}]}]}]]}],"p":"$@9","v":null,"s":"$a"},"c":"$Qb"},"h":{"r":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#243448"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Jose Hernandez"}],["$","meta","1",{"name":"description","content":"Jose Hernandez — AI enablement, security practitioner, and software engineer by day — gamer, photographer and regular human also by day... and night."}],["$","link","2",{"rel":"icon","href":"/icon.svg?icon.09q66k5as5pr3.svg","sizes":"any","type":"image/svg+xml"}],["$","$L17","3",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":null,"s":"$a"}},"a":"$@19","u":"$@1a","b":"0iPpB20y7VJvlO76lAZhC"}
+11:null
+a:300
+1a:true
+a:C
+19:0
+c:"$undefined"
+9:"$undefined"
+18:"$undefined"
+12:"$undefined"
