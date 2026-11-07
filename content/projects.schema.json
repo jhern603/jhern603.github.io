@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Selected work",
+  "description": "Projects shown in the Selected Work list, the project pages, and the terminal's projects / about / open commands. Order here is display order; numbers (01, 02…) come from position.",
+  "type": "object",
+  "required": ["projects"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "projects": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/project" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "line": {
+      "description": "One line of terminal output: a plain string, or an object with a color tone.",
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "required": ["text"],
+          "properties": {
+            "text": { "type": "string" },
+            "tone": { "enum": ["default", "accent", "dim", "error"] }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "section": {
+      "type": "object",
+      "required": ["label", "file", "command", "output", "prose"],
+      "properties": {
+        "label": { "type": "string", "description": "Name in the section list, e.g. Overview." },
+        "file": { "type": "string", "description": "File name shown in the terminal title bar." },
+        "command": { "type": "string", "description": "Command shown after the prompt." },
+        "output": { "type": "array", "items": { "$ref": "#/$defs/line" } },
+        "prose": { "type": "string", "description": "Paragraph shown under the terminal." }
+      },
+      "additionalProperties": false
+    },
+    "project": {
+      "type": "object",
+      "required": ["slug", "title", "tag", "year", "shipped", "role", "summary", "stack", "sections"],
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "URL part: /work/<slug>. Lowercase letters, digits and dashes." },
+        "title": { "type": "string" },
+        "tag": { "type": "string", "description": "Category, e.g. Security." },
+        "year": { "type": "string" },
+        "shipped": { "type": "string", "description": "Shown under SHIPPED, e.g. 10.2026." },
+        "role": { "type": "string" },
+        "summary": { "type": "string", "description": "One sentence for the list and the project hero." },
+        "stack": { "type": "array", "items": { "type": "string" } },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "href"],
+            "properties": { "label": { "type": "string" }, "href": { "type": "string" } },
+            "additionalProperties": false
+          }
+        },
+        "sections": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/section" } }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,172 +1,58 @@
-# Jose Hernandez — Portfolio
-Personal portfolio site built with React + Vite + Tailwind CSS + Framer Motion.
+# josehernandez.dev
 
-**Live:** [josehernandez.dev](https://josehernandez.dev)
-
----
-
-## Stack
-
-| Tool | Purpose |
-|---|---|
-| [React 18](https://react.dev) | UI |
-| [Vite 5](https://vitejs.dev) | Build / dev server |
-| [Tailwind CSS 3](https://tailwindcss.com) | Styling |
-| [Framer Motion](https://www.framer.com/motion/) | Scroll animations |
-| [Lucide React](https://lucide.dev) | Icons |
-
----
-
-## Getting Started
+Personal portfolio built with Next.js (App Router). Every page is generated as static HTML at build time.
 
 ```bash
 npm install
-npm run dev       # http://localhost:3000
-npm run build     # production build → dist/
-npm run preview   # preview production build locally
+npm run dev      # http://localhost:3000
+npm run build    # production build; also checks content/projects.json
 ```
 
----
+## Where things live
 
-## Project Structure
+| Path | What it holds |
+| --- | --- |
+| `content/projects.json` | Selected Work: every project, its page, and its sections |
+| `content/site.json` | Name, bio, email, links, stack, the home page's quick commands |
+| `terminal/commands/` | One file per terminal command |
+| `public/` | `portrait.jpg` and `resume.pdf` go here |
+| `app/globals.css` | All styles |
 
-```
-portfolio/
-├── public/
-│   ├── avatar.jpg        ← drop your headshot here
-│   └── favicon.svg
-├── src/
-│   ├── data/
-│   │   └── content.js    ← all site content lives here
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Ticker.jsx
-│   │   ├── About.jsx
-│   │   ├── Experience.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Stack.jsx
-│   │   └── Contact.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── tailwind.config.js
-└── vite.config.js
-```
+## Editing Selected Work
 
----
+Everything about a project is in `content/projects.json`. The file has a schema (`projects.schema.json`), so VS Code autocompletes fields and flags mistakes as you type.
 
-## Customizing Content
+- **Order** in the file is display order. Numbers (01, 02…) come from position, so reorder by moving entries.
+- **Add a project:** copy an entry and change `slug` (its URL: `/work/<slug>`, lowercase letters, digits, dashes), `title`, and the rest. It shows up in the list, on its own page, in "next project", and in the terminal's `projects`, `about <n>` and `open <n>`.
+- **Remove a project:** delete its entry.
+- **Sections** (Overview, Approach…) are a list per project. Each has a `label`, the `file` and `command` shown in the terminal panel, the `output` lines, and the `prose` paragraph under it. Add, remove or rename them freely.
+- **Output lines** are plain strings, or `{ "text": "…", "tone": "accent" | "dim" | "error" }` for color.
 
-**All text, data, and links are in one place:** `src/data/content.js`
+`npm run build` stops with a message naming the project if a required field is missing or two projects share a slug.
 
-### Sections
+## Adding a terminal command
 
-| Export | Controls |
-|---|---|
-| `hero` | Name, tagline, code snippet, stat counters |
-| `about` | Bio paragraphs, highlighted phrases, location |
-| `experience` | Job entries — company, role, period, bullets |
-| `projects` | Project cards — title, description, tags, featured flag |
-| `stack` | Tech categories and items |
-| `education` | School, degree, period |
-| `contact` | Email, GitHub URL, LinkedIn URL |
-| `ticker` | Scrolling marquee items |
-| `nav` | Navigation link labels (must match section IDs) |
+1. Create `terminal/commands/<name>.ts`:
 
-### Adding a project
+   ```ts
+   import { defineCommand } from '../types';
+   import { accent, dim } from '../lines';
 
-```js
-// src/data/content.js → projects array
-{
-  title: 'My Project',
-  description: 'What it does and why it matters.',
-  tags: ['Python', 'OCI', 'MCP'],
-  featured: true,   // true = large card in top row, false = smaller card below
-}
-```
+   export default defineCommand({
+     name: 'hobbies',
+     description: 'what I do for fun',
+     run: () => [accent('photography'), 'gaming', dim('and sleeping, occasionally')],
+   });
+   ```
 
-### Adding an experience entry
+2. Register it in `terminal/commands/index.ts`: import it and add it to the `commands` list. `help` picks it up automatically, in list order.
 
-```js
-// src/data/content.js → experience array (newest first)
-{
-  company: 'Company Name',
-  role: 'Your Title',
-  period: 'Jan 2025 – Present',
-  location: 'City, ST',
-  bullets: [
-    'Achievement one.',
-    'Achievement two.',
-  ],
-},
-```
+What a command can do:
 
----
+- **Return** a string, a colored line (`accent`, `dim`, `error` from `../lines`), an array of either, or nothing. `\n` inside a string breaks the line.
+- **Read** `ctx.args` (words after the name), `ctx.rest` (the raw text after the name), `ctx.site`, `ctx.projects` and `ctx.commands`.
+- **Act** with `ctx.navigate('/work/leak-watch')` and `ctx.clear()`.
+- **Be async**: return a Promise, e.g. to `fetch` something. A thrown error is printed in red.
+- **Options:** `usage` (shown in `help` instead of the name, e.g. `'open <n>'`), `aliases` (other names), `hidden: true` (works but stays out of `help`).
 
-## Design Tokens
-
-Defined in `tailwind.config.js`:
-
-| Token | Value | Usage |
-|---|---|---|
-| `bg-light` | `#243448` | Page background |
-| `bg-dark` | `#1A2838` | Deeper background variant |
-| `surface-light` | `#1C2D3E` | Cards, panels |
-| `primary-light` | `#E8EDF2` | Body text, headings |
-| `accent` | `#5BB8D4` | Links, highlights, icons |
-| `muted-light` | `#7A95AB` | Secondary text, labels |
-| `border` | `#3A5170` | Card borders, dividers |
-
-### Gradient text
-
-Applied via the `.gradient-text` CSS class (`src/index.css`). Animates over 30s between:
-
-```
-#5BB8D4 → #2A7BA0 → #1A6FA5 → #2A7BA0 → #5BB8D4
-```
-
-Used on: `HERNANDEZ`, section heading callouts (`intersection`, `worked`, `work`, `Arsenal`, `TALK`), and inline bio highlights.
-
----
-
-## Adding Your Photo
-
-Drop a headshot at `public/avatar.jpg`. The About section displays it automatically. If the file is missing, it falls back to "JH" initials.
-
-Recommended: square crop, at least 800×800px, face near top of frame (the image uses `object-top`).
-
----
-
-## Deployment
-
-### Vercel (recommended)
-
-```bash
-npm i -g vercel
-vercel
-```
-
-Point your custom domain (`josehernandez.dev`) in the Vercel dashboard under **Domains**.
-
-### Netlify
-
-```bash
-npm run build
-# drag-and-drop the dist/ folder at app.netlify.com/drop
-```
-
-Or connect the GitHub repo for automatic deploys on push.
-
----
-
-## Key Files Reference
-
-| File | What to touch |
-|---|---|
-| `src/data/content.js` | All copy, links, and data |
-| `src/index.css` | Gradient, ticker, scrollbar styles |
-| `tailwind.config.js` | Color tokens, font, animation config |
-| `public/avatar.jpg` | Your headshot |
-| `public/favicon.svg` | Browser tab icon |
-| `index.html` | Page title and meta description |
+`projectFromArgs(ctx, 'verb')` in `terminal/lines.ts` turns `2` or `leak-watch` into a project, or a usage line when it doesn't match.

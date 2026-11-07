@@ -1,0 +1,131 @@
+{
+  "name": "Jose Hernandez",
+  "role": "Software Engineer",
+  "bio": "AI enablement, security practitioner, and software engineer by day — gamer, photographer and regular human also by day... and night.",
+  "domain": "josehernandez.dev",
+  "email": "jhern603@gmail.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/jhern603/",
+    "photos": "https://photos.josehernandez.dev",
+    "blog": "https://blog.josehernandez.dev",
+    "resume": "/Jose_Hernandez_Resume.pdf"
+  },
+  "portrait": "/portrait.jpg",
+  "photos": [
+    { "id": "dsc00184", "title": "College of Business" },
+    { "id": "dsc01164", "title": "Campus After Dark" },
+    { "id": "dsc06287", "title": "Atlas 747 on Final" },
+    { "id": "dsc05187", "title": "Cardboard Regatta" }
+  ],
+  "stack": [
+    {
+      "name": "AI",
+      "items": [
+        "Agentic AI",
+        "MCP",
+        "AI Harness Development"
+      ]
+    },
+    {
+      "name": "Security",
+      "items": [
+        "Security automation",
+        "Data Loss Prevention",
+        "SSO / OIDC",
+        "Secure system design"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "items": [
+        "Self-hosted infrastructure",
+        "Kubernetes",
+        "Docker",
+        "Oracle Cloud",
+        "AWS"
+      ]
+    },
+    {
+      "name": "Languages",
+      "items": [
+        "Python",
+        "Go",
+        "Java",
+        "JavaScript"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Deloitte",
+      "role": "Software Engineer II",
+      "dates": "Oct 2026 - Current",
+      "location": "Austin, TX",
+      "points": [
+        "Delivered a Salesforce-style outreach platform for medical plan eligibility in GPS, meeting core requirements for multichannel communication across email, SMS, and phone.",
+        "Reviewed AI-generated code, tests and documentation for accuracy and completeness against requirements before merge, keeping quality high.",
+        "Built and deployed AWS infrastructure with Terraform, supporting repeatable, reliable releases across Agile sprints with engineering, QA and product teams."
+      ]
+    },
+    {
+      "company": "Oracle",
+      "role": "Software Engineer",
+      "dates": "Jul 2024 - Mar 2026",
+      "location": "Austin, TX",
+      "points": [
+        "Designed and shipped production Model Context Protocol (MCP) service enforcing permission-based LLM access across multiple enterprise knowledge sources, with data-boundary enforcement and access controls that prevented unauthorized data exposure through AI interfaces.",
+        "Served as technical lead on a corporate-wide AI Adoption program; partnered with security architects to define security standards and guardrails for agentic tooling, embedding safe-use controls into internal developer workflows.",
+        "Rearchitected monolithic PL/SQL Data Loss Prevention (DLP) platform into a modular, policy-based, fully automated system which simplifies policy management and enabling faster, safer iteration on data-protection rules.",
+        "Designed a Unified MCP Gateway centralizing governed access to enterprise knowledge behind a single policy-enforced interface, reducing access-control complexity and configuration risk for product teams."
+      ]
+    },
+    {
+      "company": "Oracle",
+      "role": "Software Engineer Intern",
+      "dates": "May 2023 - Aug 2023",
+      "location": "Austin, TX",
+      "points": [
+        "Reduced CI/CD build times from several hours to under 10 minutes by parallelizing test execution and optimizing dependency resolution, accelerating production release cycles.",
+        "Built mock OCI service integrations to simulate real user requests against OCI Kubernetes Engine (OKE) operations, enabling full prerelease validation without live infrastructure changes."
+      ]
+    },
+    {
+      "company": "Florida International University",
+      "role": "Junior Webmaster",
+      "dates": "Feb 2024 - Jun 2024",
+      "location": "Miami, FL",
+      "points": [
+        "Deployed an LLM-powered support ticket summarization tool using prompt engineering and generative AI APIs, reducing manual ticket review time for the IT team and improving triage throughput.",
+        "Maintained and extended the CS department website using PHP and WordPress."
+      ]
+    },
+    {
+      "company": "US Army",
+      "role": "Biomedical Equipment Technician",
+      "dates": "May 2017 - May 2023",
+      "location": "Miami, FL",
+      "points": [
+        "Managed accountability and audit of over $2M in medical and non-medical equipment across multiple operational contexts.",
+        "Trained 100+ personnel at an overseas combat support hospital in equipment operation, care, and maintenance protocols under operational conditions."
+      ]
+    }
+  ],
+  "quickCommands": [
+    {
+      "label": "Projects",
+      "command": "projects"
+    },
+    {
+      "label": "Stack",
+      "command": "stack"
+    },
+    {
+      "label": "Contact",
+      "command": "contact"
+    },
+    {
+      "label": "Help",
+      "command": "help"
+    }
+  ]
+}
