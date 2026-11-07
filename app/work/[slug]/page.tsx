@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProject, pad, projects, site } from '@/lib/content';
+import { pageMetadata, projectJsonLd } from '@/lib/seo';
+import { JsonLd } from '@/components/JsonLd';
 import { Footer } from '@/components/Footer';
 import { SectionViewer } from '@/components/SectionViewer';
 
@@ -15,7 +17,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = getProject((await params).slug);
-  return p ? { title: p.title, description: p.summary } : {};
+  if (!p) return {};
+  return {
+    title: p.title,
+    description: p.summary,
+    ...pageMetadata(`${p.title} — ${site.name}`, p.summary, `/work/${p.slug}`),
+  };
 }
 
 export default async function ProjectPage({ params }: Props) {
@@ -25,6 +32,7 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <>
+      <JsonLd data={projectJsonLd(p)} />
       <header className="topbar is-detail">
         <Link className="brand" href="/">
           {site.name.toUpperCase()}

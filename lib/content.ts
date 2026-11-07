@@ -41,6 +41,8 @@ export type Site = {
   name: string;
   role: string;
   bio: string;
+  /** Search result and social preview text; bio is the on-page voice. */
+  description: string;
   domain: string;
   email: string;
   links: { github: string; linkedin: string; photos: string; blog: string; resume: string };

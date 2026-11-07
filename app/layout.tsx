@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Archivo, JetBrains_Mono } from 'next/font/google';
 import { site } from '@/lib/content';
+import { siteTitle, siteUrl } from '@/lib/seo';
 import { TerminalProvider } from '@/terminal/TerminalProvider';
 import './globals.css';
 
@@ -8,8 +9,9 @@ const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-
 const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500', '700'], variable: '--font-mono', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: { default: site.name, template: `%s — ${site.name}` },
-  description: `${site.name} — ${site.bio}`,
+  metadataBase: new URL(siteUrl),
+  title: { default: siteTitle, template: `%s — ${site.name}` },
+  description: site.description,
 };
 
 export const viewport: Viewport = { themeColor: '#243448' };

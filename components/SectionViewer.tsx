@@ -59,7 +59,13 @@ export function SectionViewer({ project }: { project: NumberedProject }) {
             </div>
           </div>
         </div>
-        <p className="d-prose">{s.prose}</p>
+        {/* Every section stays in the HTML so crawlers can read tabs that aren't open. */}
+        {sections.map((x, i) => (
+          <div key={x.label} hidden={i !== active}>
+            <h2 className="sr-only">{x.label}</h2>
+            <p className="d-prose">{x.prose}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

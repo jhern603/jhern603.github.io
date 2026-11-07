@@ -17,7 +17,7 @@ export function WorkList() {
               <div className="label">
                 {p.tag.toUpperCase()} · {p.year}
               </div>
-              <div className="work-title cond">{p.title}</div>
+              <h3 className="work-title cond">{p.title}</h3>
             </div>
             <div className="work-desc">{p.summary}</div>
             <span className="work-mark">VIEW →</span>

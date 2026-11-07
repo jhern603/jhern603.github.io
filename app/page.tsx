@@ -1,11 +1,16 @@
+import type { Metadata } from 'next';
 import { site } from '@/lib/content';
+import { homeJsonLd, pageMetadata, siteTitle } from '@/lib/seo';
 import { Console } from '@/components/Console';
 import { Experience } from '@/components/Experience';
 import { Footer } from '@/components/Footer';
+import { JsonLd } from '@/components/JsonLd';
 import { PhotoGrid } from '@/components/PhotoGrid';
 import { Portrait } from '@/components/Portrait';
 import { SiteHeader } from '@/components/SiteHeader';
 import { WorkList } from '@/components/ProjectList';
+
+export const metadata: Metadata = pageMetadata(siteTitle, site.description, '/');
 
 export default function Home() {
   const [first, ...rest] = site.name.split(' ');
@@ -13,6 +18,7 @@ export default function Home() {
 
   return (
     <>
+      <JsonLd data={homeJsonLd()} />
       <SiteHeader />
       <main>
         <section className="hero" id="about">

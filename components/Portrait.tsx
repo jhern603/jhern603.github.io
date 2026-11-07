@@ -15,10 +15,10 @@ export function Portrait({ src, alt }: { src: string; alt: string }) {
 
   return (
     <div className="portrait">
-      <span className="portrait-ph">Add public{src}</span>
+      {missing && <span className="portrait-ph">Add public{src}</span>}
       {!missing && (
         // Plain <img>: the file may not exist yet, and next/image would fail on a missing file.
-        <img ref={img} className="portrait-img" src={src} alt={alt} onError={() => setMissing(true)} />
+        <img ref={img} className="portrait-img" src={src} alt={alt} width={1000} height={1334} fetchPriority="high" onError={() => setMissing(true)} />
       )}
     </div>
   );
