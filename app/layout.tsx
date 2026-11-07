@@ -20,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${archivo.variable} ${mono.variable}`} data-scroll-behavior="smooth">
       <body>
+        <a className="skip-link" href="#main">Skip to main content</a>
         <TerminalProvider>{children}</TerminalProvider>
       </body>
     </html>

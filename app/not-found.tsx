@@ -10,10 +10,10 @@ export default function NotFound() {
     <>
       <header className="topbar is-detail">
         <Link className="brand" href="/">{site.name.toUpperCase()}</Link>
-        <Link className="link back" href="/#work">← ALL WORK</Link>
+        <Link className="link back" href="/#work"><span aria-hidden="true">←</span> ALL WORK</Link>
         <span>404</span>
       </header>
-      <main>
+      <main id="main" tabIndex={-1}>
         <section className="d-hero">
           <div className="stripe" aria-hidden="true" />
           <h1 className="cond">Not found</h1>

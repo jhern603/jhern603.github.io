@@ -5,6 +5,7 @@ import { Console } from '@/components/Console';
 import { Experience } from '@/components/Experience';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
+import { NewTabMark } from '@/components/NewTabMark';
 import { PhotoGrid } from '@/components/PhotoGrid';
 import { Portrait } from '@/components/Portrait';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -20,7 +21,7 @@ export default function Home() {
     <>
       <JsonLd data={homeJsonLd()} />
       <SiteHeader />
-      <main>
+      <main id="main" tabIndex={-1}>
         <section className="hero" id="about">
           <div className="stripe" aria-hidden="true" />
           <Portrait src={site.portrait} alt={`Portrait of ${site.name}`} />
@@ -42,7 +43,7 @@ export default function Home() {
           <h2 className="cond">grab my resume</h2>
           <div className="cta-actions">
             <a className="btn-primary" href={links.resume} download>
-              DOWNLOAD PDF ↓
+              DOWNLOAD PDF <span aria-hidden="true">↓</span>
             </a>
             <a className="btn-ghost" href={`mailto:${email}`}>
               {email}
@@ -65,7 +66,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {k} ↗
+                  {k} <NewTabMark />
                 </a>
               );
             })}

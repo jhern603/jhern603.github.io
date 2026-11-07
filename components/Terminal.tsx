@@ -45,7 +45,7 @@ export function Terminal() {
         <span>jose@sys — zsh</span>
         <span className="kbd">{shortcut}</span>
       </div>
-      <div className="term-out" ref={outRef} role="log" aria-live="polite" onClick={focusInput}>
+      <div className="term-out" ref={outRef} role="log" aria-live="polite" aria-label="Terminal output" tabIndex={0} onClick={focusInput}>
         {lines.map((l, i) => (
           <div key={i} className={`tone-${l.tone ?? 'default'}`}>{l.text}</div>
         ))}

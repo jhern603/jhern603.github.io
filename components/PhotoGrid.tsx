@@ -1,4 +1,5 @@
 import { site } from '@/lib/content';
+import { NewTabMark } from './NewTabMark';
 
 const base = site.links.photos.replace(/\/$/, '');
 
@@ -11,7 +12,7 @@ export function PhotoGrid() {
       <div className="sec-head">
         <h2 className="cond">Behind the lens</h2>
         <a className="label link" href={base} target="_blank" rel="noopener noreferrer">
-          {host.toUpperCase()} ↗
+          {host.toUpperCase()} <NewTabMark />
         </a>
       </div>
       <div className="photo-grid">
@@ -19,6 +20,7 @@ export function PhotoGrid() {
           <a key={p.id} className="photo" href={`${base}/#photo/${p.id}`} target="_blank" rel="noopener noreferrer">
             <img className="photo-img" src={`${base}/img/thumb/${p.id}.jpg`} alt={p.title} loading="lazy" decoding="async" />
             <span className="photo-title" aria-hidden="true">{p.title}</span>
+            <span className="sr-only"> (opens in a new tab)</span>
           </a>
         ))}
       </div>

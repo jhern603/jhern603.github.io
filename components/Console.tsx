@@ -15,9 +15,9 @@ export function Console() {
       <div>
         <div className="cmd-list">
           {site.quickCommands.map((q, i) => (
-            <button key={q.command} type="button" className={`pick${i === active ? ' is-active' : ''}`} onMouseEnter={() => setActive(i)} onClick={() => run(q.command)}>
+            <button key={q.command} type="button" className={`pick${i === active ? ' is-active' : ''}`} onMouseEnter={() => setActive(i)} onFocus={() => setActive(i)} onClick={() => run(q.command)}>
               <span className="caret" aria-hidden="true">▶</span>
-              <span className="pick-key">{q.command}</span>
+              <span className="pick-key" aria-hidden="true">{q.command}</span>
               <span className="pick-label cond">{q.label}</span>
             </button>
           ))}

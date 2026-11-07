@@ -20,7 +20,7 @@ export function WorkList() {
               <h3 className="work-title cond">{p.title}</h3>
             </div>
             <div className="work-desc">{p.summary}</div>
-            <span className="work-mark">VIEW →</span>
+            <span className="work-mark">VIEW <span aria-hidden="true">→</span></span>
             <span className="work-arrow" aria-hidden="true">
               →
             </span>

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getProject, pad, projects, site } from '@/lib/content';
 import { pageMetadata, projectJsonLd } from '@/lib/seo';
 import { JsonLd } from '@/components/JsonLd';
+import { NewTabMark } from '@/components/NewTabMark';
 import { Footer } from '@/components/Footer';
 import { SectionViewer } from '@/components/SectionViewer';
 
@@ -38,14 +39,14 @@ export default async function ProjectPage({ params }: Props) {
           {site.name.toUpperCase()}
         </Link>
         <Link className="link back" href="/#work">
-          ← ALL WORK
+          <span aria-hidden="true">←</span> ALL WORK
         </Link>
         <span>
           <span className="hide-m">PROJECT </span>
           {p.no} / {pad(projects.length)}
         </span>
       </header>
-      <main>
+      <main id="main" tabIndex={-1}>
         <section className="d-hero">
           <div className="stripe" aria-hidden="true" />
           <div className="d-ghost cond" aria-hidden="true">
@@ -80,7 +81,7 @@ export default async function ProjectPage({ params }: Props) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {l.label} ↗
+                    {l.label} <NewTabMark />
                   </a>
                 ))}
               </div>
